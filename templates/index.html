@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEAUV - Data Extraction & Plotting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR WITH PROPER NAVIGATION -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-brand" style="flex-direction: row; align-items: center;">
+    <img src="{{ url_for('static', filename='drdo_nstl.jpg') }}"
+         alt="DRDO NSTL"
+         class="navbar-logo">
+    <div style="display:flex; flex-direction:column; gap:2px;">
+        <h1 class="navbar-title">HEAUV</h1>
+        <span class="navbar-subtitle">Data Extraction & Plotting</span>
+    </div>
+</div>
+        
+        <ul class="navbar-menu">
+            <li><a href="#" onclick="showSection('home')" class="nav-link active">Home</a></li>
+            <li><a href="#" onclick="showSection('extract')" class="nav-link">Extract</a></li>
+            <li><a href="#" onclick="showSection('plots')" class="nav-link">Plots</a></li>
+            <li><a href="#" onclick="showSection('report')" class="nav-link">Report</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HOME PAGE - STUNNING HERO SECTION -->
+<section id="home" class="page-section home-section">
+    <!-- Animated background elements -->
+    <div class="hero-background">
+        <div class="ocean-waves"></div>
+        <div class="bubble-float bubble-1"></div>
+        <div class="bubble-float bubble-2"></div>
+        <div class="bubble-float bubble-3"></div>
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+    </div>
+
+    <div class="home-container">
+        <div class="hero-content">
+            
+
+            <h2 class="hero-title">
+                <span class="title-word">HEAUV</span>
+                <span class="title-word">Data Intelligence</span>
+            </h2>
+            
+            <p class="hero-subtitle">Advanced extraction, visualization, and analysis platform for autonomous underwater vehicle missions</p>
+            
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <span class="stat-number">Real-time</span>
+                    <span class="stat-label">Data Processing</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">Multi-sensor</span>
+                    <span class="stat-label">Integration</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">Advanced</span>
+                    <span class="stat-label">Visualization</span>
+                </div>
+            </div>
+
+            <div class="hero-features">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3>Extract</h3>
+                    <p>Process sensor data with precision algorithms</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 17"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Visualize</h3>
+                    <p>Create stunning interactive visualizations</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="12" y1="19" x2="12" y2="12"></line>
+                            <line x1="9" y1="16" x2="15" y2="16"></line>
+                        </svg>
+                    </div>
+                    <h3>Report</h3>
+                    <p>Generate comprehensive mission reports</p>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <button class="cta-btn primary" onclick="showSection('extract')">Start Extraction</button>
+                <button class="cta-btn secondary" onclick="showSection('plots')">View Visualizations</button>
+            </div>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="auv-container">
+                <div class="auv-main">
+                    <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" class="auv-svg">
+                        <!-- Main body -->
+                        <defs>
+                            <linearGradient id="auvGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:var(--blue-soft);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:var(--blue-main);stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- Main hull -->
+                        <ellipse cx="150" cy="150" rx="70" ry="40" fill="url(#auvGradient)" filter="url(#glow)"/>
+                        
+                        <!-- Nose cone -->
+                        <path d="M 220 150 Q 250 150 260 150 Q 250 145 220 145 Z" fill="var(--butter-yellow)" opacity="0.8"/>
+                        <path d="M 220 150 Q 250 150 260 150 Q 250 155 220 155 Z" fill="var(--butter-yellow)" opacity="0.6"/>
+                        
+                        <!-- Sensor array (front) -->
+                        <circle cx="80" cy="140" r="6" fill="var(--butter-yellow)" opacity="0.9"/>
+                        <circle cx="80" cy="160" r="6" fill="var(--butter-yellow)" opacity="0.9"/>
+                        <circle cx="90" cy="135" r="4" fill="var(--butter-yellow)" opacity="0.7"/>
+                        <circle cx="90" cy="165" r="4" fill="var(--butter-yellow)" opacity="0.7"/>
+                        
+                        <!-- Propellers -->
+                        <g class="propeller" transform="translate(180, 130)">
+                            <rect x="-3" y="-15" width="6" height="30" fill="var(--blue-soft)" opacity="0.7"/>
+                        </g>
+                        <g class="propeller" transform="translate(180, 170)">
+                            <rect x="-3" y="-15" width="6" height="30" fill="var(--blue-soft)" opacity="0.7"/>
+                        </g>
+                        
+                        <!-- Stabilizer fin -->
+                        <path d="M 140 190 L 160 190 L 150 210 Z" fill="var(--blue-soft)" opacity="0.8"/>
+                        
+                        <!-- Sensor rings -->
+                        <circle cx="150" cy="150" r="55" fill="none" stroke="var(--butter-yellow)" stroke-width="1.5" opacity="0.3"/>
+                        <circle cx="150" cy="150" r="70" fill="none" stroke="var(--blue-soft)" stroke-width="1" opacity="0.2"/>
+                    </svg>
+                </div>
+                
+                <!-- Floating particles around AUV -->
+                <div class="sensor-dots">
+                    <div class="dot dot-1"></div>
+                    <div class="dot dot-2"></div>
+                    <div class="dot dot-3"></div>
+                    <div class="dot dot-4"></div>
+                    <div class="dot dot-5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXTRACT PAGE -->
+<section id="extract" class="page-section hidden">
+    <div class="card-container">
+        <div class="card extract-card">
+            <div class="card-header">
+                <h2>Extract Data</h2>
+                <p class="card-subtitle">Select a folder to begin extraction</p>
+            </div>
+
+            <div class="card-body">
+                <div class="file-input-section">
+                    <input type="text" placeholder="No folder selected" readonly id="fileNameDisplay" class="folder-display">
+                    
+                    <button class="browse-btn" onclick="pickExtractFolder()">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                        </svg>
+                        Browse Folder
+                    </button>
+                </div>
+
+                <div class="action-section">
+                    <button class="action-btn primary-action" onclick="extractFolder()">
+                        <span>Extract</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PLOTS PAGE -->
+<section id="plots" class="page-section hidden">
+    <div class="card-container">
+        <div class="card plots-card">
+            <div class="card-header">
+                <h2>Generate Plots</h2>
+                <p class="card-subtitle">Select a folder to create visualizations</p>
+            </div>
+
+            <div class="card-body">
+                <div class="file-input-section">
+                    <input type="text" placeholder="No folder selected" readonly id="plotFileName" class="folder-display">
+                    
+                    <button class="browse-btn" onclick="uploadFolder()">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                        </svg>
+                        Browse Folder
+                    </button>
+                </div>
+
+                <div class="action-section">
+                    <button class="action-btn primary-action" onclick="triggerPlotting()">
+                        <span>Save all Images</span>
+                    </button>
+                    <button class="action-btn secondary-action" onclick="openInteractive()">
+                        <span>Open Interactive</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- REPORT PAGE -->
+<section id="report" class="page-section hidden">
+    <div class="card-container">
+        <div class="card report-card">
+            <div class="card-header">
+                <h2>Generate Report</h2>
+                <p class="card-subtitle">Select a run folder to generate a PDF mission report</p>
+            </div>
+
+            <div class="card-body">
+                <div class="file-input-section">
+                    <input type="text" placeholder="No folder selected" readonly id="reportFileName" class="folder-display">
+                    <button class="browse-btn" onclick="pickReportFolder()">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                        </svg>
+                        Browse Folder
+                    </button>
+                </div>
+
+                <div class="action-section">
+                    <button class="action-btn primary-action" onclick="triggerReport()">
+                        <span>Generate Report</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- REPORT SUCCESS POPUP -->
+<div id="reportPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:10000; justify-content:center; align-items:center;">
+    <div style="background:white; border-radius:16px; padding:40px 48px; max-width:440px; width:90%; box-shadow:0 20px 60px rgba(11,44,77,0.25); text-align:center;">
+        <div style="width:56px; height:56px; background:linear-gradient(135deg,#1f5fa0,#123f6d); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="19" x2="12" y2="12"></line>
+                <line x1="9" y1="16" x2="15" y2="16"></line>
+            </svg>
+        </div>
+        <h3 style="font-size:20px; font-weight:700; color:#0b2c4d; margin-bottom:10px;">Report Ready</h3>
+        <p style="font-size:14px; color:#666; line-height:1.6; margin-bottom:28px;">Your mission report has been generated successfully. Please check your <strong style="color:#123f6d;">Downloads</strong> folder for the PDF file.</p>
+        <button onclick="document.getElementById('reportPopup').style.display='none'" style="background:linear-gradient(135deg,#1f5fa0,#123f6d); color:white; border:none; border-radius:8px; padding:12px 36px; font-size:14px; font-weight:600; cursor:pointer; width:100%;">Got it</button>
+    </div>
+</div>
+
+<!-- PROGRESS BAR COMPONENT - SHARED LOADING OVERLAY -->
+<div id="loading-overlay">
+
+    <!-- EXTRACTION PROGRESS BAR -->
+    <div class="progress-component" id="extractProgressBar" style="display: none;">
+        <div class="progress-label">
+            <span>Processing extraction...</span>
+            <span>
+                <span class="progress-percent" id="extractProgressPercent">0%</span>
+                <span> | </span>
+                <span class="progress-time" id="extractTimeRemaining">--</span>
+            </span>
+        </div>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="extractProgressFill">
+                <span class="progress-text" id="extractProgressText">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PLOTTING PROGRESS BAR -->
+    <div class="progress-component" id="plotProgressBar" style="display: none;">
+        <div class="progress-label">
+            <span>Processing plots...</span>
+            <span>
+                <span class="progress-percent" id="plotProgressPercent">0%</span>
+                <span> | </span>
+                <span class="progress-time" id="plotTimeRemaining">--</span>
+            </span>
+        </div>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="plotProgressFill">
+                <span class="progress-text" id="plotProgressText">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- REPORT PROGRESS BAR -->
+    <div class="progress-component" id="reportProgressBar" style="display: none;">
+    <div class="progress-label">
+        <span>Generating report...</span>
+        <span>
+            <span class="progress-percent" id="reportProgressPercent">0%</span>
+            <span> | </span>
+            <span class="progress-time" id="reportTimeRemaining">--</span>
+        </span>
+    </div>
+    <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="reportProgressFill" style="width:0%;">
+            <span class="progress-text" id="reportProgressText">0%</span>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

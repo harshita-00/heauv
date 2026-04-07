@@ -1,0 +1,15 @@
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\bin\Debug\net10.0\win-x64\MyApp.exe
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\bin\Debug\net10.0\win-x64\MyApp.deps.json
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\bin\Debug\net10.0\win-x64\MyApp.runtimeconfig.json
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\bin\Debug\net10.0\win-x64\MyApp.dll
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\bin\Debug\net10.0\win-x64\MyApp.pdb
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\obj\Debug\net10.0\win-x64\MyApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\obj\Debug\net10.0\win-x64\MyApp.AssemblyInfoInputs.cache
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\obj\Debug\net10.0\win-x64\MyApp.AssemblyInfo.cs
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\obj\Debug\net10.0\win-x64\MyApp.csproj.CoreCompileInputs.cache
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\obj\Debug\net10.0\win-x64\MyApp.sourcelink.json
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\obj\Debug\net10.0\win-x64\MyApp.dll
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\obj\Debug\net10.0\win-x64\refint\MyApp.dll
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\obj\Debug\net10.0\win-x64\MyApp.pdb
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\obj\Debug\net10.0\win-x64\MyApp.genruntimeconfig.cache
+C:\Users\dell pc\OneDrive\Desktop\heauv\MyApp\obj\Debug\net10.0\win-x64\ref\MyApp.dll

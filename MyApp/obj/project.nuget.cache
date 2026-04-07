@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "KZZdYtC5Y9I=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\E N V Y\\OneDrive\\Desktop\\heauv\\MyApp\\MyApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\E N V Y\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\10.0.2\\microsoft.netcore.app.runtime.win-x64.10.0.2.nupkg.sha512",
+    "C:\\Users\\E N V Y\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\10.0.2\\microsoft.netcore.app.runtime.linux-x64.10.0.2.nupkg.sha512",
+    "C:\\Users\\E N V Y\\.nuget\\packages\\microsoft.netcore.app.runtime.osx-x64\\10.0.2\\microsoft.netcore.app.runtime.osx-x64.10.0.2.nupkg.sha512",
+    "C:\\Users\\E N V Y\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\10.0.2\\microsoft.windowsdesktop.app.runtime.win-x64.10.0.2.nupkg.sha512",
+    "C:\\Users\\E N V Y\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\10.0.2\\microsoft.aspnetcore.app.runtime.win-x64.10.0.2.nupkg.sha512",
+    "C:\\Users\\E N V Y\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\10.0.2\\microsoft.aspnetcore.app.runtime.linux-x64.10.0.2.nupkg.sha512",
+    "C:\\Users\\E N V Y\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.osx-x64\\10.0.2\\microsoft.aspnetcore.app.runtime.osx-x64.10.0.2.nupkg.sha512",
+    "C:\\Users\\E N V Y\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\10.0.2\\microsoft.netcore.app.host.linux-x64.10.0.2.nupkg.sha512",
+    "C:\\Users\\E N V Y\\.nuget\\packages\\microsoft.netcore.app.host.osx-x64\\10.0.2\\microsoft.netcore.app.host.osx-x64.10.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
